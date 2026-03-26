@@ -1,0 +1,78 @@
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+  theme: {
+    extend: {
+      colors: {
+        primary: {
+          50:  '#fdf8f2',
+          100: '#faefd9',
+          200: '#f4ddb0',
+          300: '#ecc480',
+          400: '#e2a24d',
+          500: '#d4842a',
+          600: '#b86820',
+          700: '#96501c',
+          800: '#7a401d',
+          900: '#64351a',
+        },
+        beige: {
+          50:  '#fdfbf7',
+          100: '#f7f0e4',
+          200: '#eee1c9',
+          300: '#e2cda6',
+          400: '#d4b47e',
+          500: '#c49a5a',
+          600: '#aa7f45',
+          700: '#8d6538',
+          800: '#735230',
+          900: '#5e4328',
+        },
+        sage: {
+          50:  '#f4f7f0',
+          100: '#e4edda',
+          200: '#ccdcb8',
+          300: '#aac48e',
+          400: '#87a967',
+          500: '#698f4b',
+          600: '#517238',
+          700: '#405a2d',
+          800: '#344826',
+          900: '#2b3c20',
+        },
+        cream: '#fdf8f2',
+        gold:  '#c9a96e',
+      },
+      fontFamily: {
+        serif:  ['Playfair Display', 'Georgia', 'serif'],
+        sans:   ['Inter', 'system-ui', 'sans-serif'],
+        accent: ['Cormorant Garamond', 'serif'],
+      },
+      animation: {
+        'fade-in':     'fadeIn 0.6s ease-out',
+        'slide-up':    'slideUp 0.6s ease-out',
+        'slide-down':  'slideDown 0.4s ease-out',
+        'scale-in':    'scaleIn 0.3s ease-out',
+        'float':       'float 3s ease-in-out infinite',
+        'shimmer':     'shimmer 2s infinite',
+      },
+      keyframes: {
+        fadeIn:   { from: { opacity: '0' },                   to: { opacity: '1' } },
+        slideUp:  { from: { opacity: '0', transform: 'translateY(30px)' }, to: { opacity: '1', transform: 'translateY(0)' } },
+        slideDown:{ from: { opacity: '0', transform: 'translateY(-20px)' }, to: { opacity: '1', transform: 'translateY(0)' } },
+        scaleIn:  { from: { opacity: '0', transform: 'scale(0.95)' }, to: { opacity: '1', transform: 'scale(1)' } },
+        float:    { '0%,100%': { transform: 'translateY(0)' }, '50%': { transform: 'translateY(-10px)' } },
+        shimmer:  { '0%': { backgroundPosition: '-200% 0' }, '100%': { backgroundPosition: '200% 0' } },
+      },
+      boxShadow: {
+        'soft':    '0 2px 20px rgba(0,0,0,0.06)',
+        'medium':  '0 4px 40px rgba(0,0,0,0.10)',
+        'gold':    '0 4px 20px rgba(201,169,110,0.30)',
+      },
+    },
+  },
+  plugins: [],
+}
